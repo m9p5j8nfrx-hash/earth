@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenSeed Foundation</title>
+  <style>
+    /* ===== 기본 설정 ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+      color: #333;
+      background-color: #f7f9f7;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #2e7d32;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #2e7d32;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 8rem 10% 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1.2rem;
+      color: #2e7d32;
+    }
+
+    p {
+      max-width: 700px;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(46, 125, 50, 0.2), rgba(46, 125, 50, 0.2)), url('https://images.unsplash.com/photo-1523978591478-c753949ff840?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      color: #f0f0f0;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      color: #2e7d32;
+      margin-bottom: 0.8rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+    }
+
+    input, textarea {
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #2e7d32;
+      color: white;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #388e3c;
+    }
+
+    footer {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GreenSeed Foundation</h1>
+    <nav>
+      <a href="#about">소개</a>
+      <a href="#activity">핵심활동</a>
+      <a href="#campaign">캠페인 참여</a>
+      <a href="#news">뉴스&스토리</a>
+      <a href="#contact">후원/문의</a>
+    </nav>
+  </header>
+
+  <!-- 소개 -->
+  <section class="hero" id="about">
+    <h1>작은 실천이 지구를 바꾼다 🌍</h1>
+    <p>GreenSeed Foundation은 고등학생들이 만든 환경 비영리재단으로, 작은 생태 실천을 통해 지구의 미래를 함께 바꿔갑니다.</p>
+  </section>
+
+  <!-- 핵심활동 -->
+  <section id="activity">
+    <h2>🌿 핵심 활동: 학교 숲 되살리기 프로젝트</h2>
+    <p>우리는 학교 안 버려진 공간을 작은 생태 숲으로 바꾸는 프로젝트를 진행합니다.  
+       학생들이 직접 나무를 심고, 생물을 관찰하며, 우리 학교의 녹색 공간을 되살립니다.</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>1️⃣ 공간 조사</h3>
+        <p>학교 내 방치된 공간을 찾아 일조량, 토양 상태, 생태를 조사합니다.</p>
+      </div>
+      <div class="card">
+        <h3>2️⃣ 숲 조성</h3>
+        <p>지역 농가에서 받은 자생식물을 심어 작은 숲을 만듭니다.</p>
+      </div>
+      <div class="card">
+        <h3>3️⃣ 생태 관찰</h3>
+        <p>식물의 성장과 곤충, 새의 변화를 기록하여 ‘학교 숲 지도’를 만듭니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 캠페인 참여 -->
+  <section id="campaign">
+    <h2>🌱 캠페인 참여</h2>
+    <p>환경은 혼자 지킬 수 없습니다.  
+       함께 실천하고 싶은 학생, 교사, 시민 누구나 GreenSeed 캠페인에 참여할 수 있습니다.</p>
+    <button onclick="joinCampaign()">참여 신청하기</button>
+  </section>
+
+  <!-- 뉴스 & 스토리 -->
+  <section id="news">
+    <h2>📖 뉴스 & 스토리</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>🌳 우리 학교 숲 완성!</h3>
+        <p>지난 5월, XX고등학교 학생들이 교정 한쪽에 작은 생태 숲을 만들었습니다.</p>
+      </div>
+      <div class="card">
+        <h3>🌍 환경의 날 플로깅 캠페인</h3>
+        <p>지역 하천 주변을 돌며 쓰레기를 줍는 ‘깨끗한 발자국’ 캠페인을 진행했습니다.</p>
+      </div>
+      <div class="card">
+        <h3>💧 빗물 재활용 아이디어 공모전</h3>
+        <p>학생들의 창의적인 환경 아이디어를 모아 지속 가능한 솔루션을 공유합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 후원 & 문의 -->
+  <section id="contact">
+    <h2>🤝 후원 및 문의</h2>
+    <p>우리의 작은 숲을 함께 키워주세요.  
+       후원 및 협업 제안은 아래 폼으로 남겨주세요.</p>
+    <form onsubmit="sendMessage(event)">
+      <input type="text" id="name" placeholder="이름" required />
+      <input type="email" id="email" placeholder="이메일" required />
+      <textarea id="message" rows="5" placeholder="문의 내용" required></textarea>
+      <button type="submit">보내기</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 GreenSeed Foundation | Created by Student Volunteers 🌿
+  </footer>
+
+  <script>
+    // 참여 버튼 클릭 시
+    function joinCampaign() {
+      alert("참여 신청이 접수되었습니다! 함께해주셔서 감사합니다 🌱");
+    }
+
+    // 문의 폼 전송 시
+    function sendMessage(e) {
+      e.preventDefault();
+      alert("문의가 성공적으로 전송되었습니다. 빠른 시일 내에 연락드리겠습니다. 🌿");
+      document.querySelector("form").reset();
+    }
+  </script>
+</body>
+</html>
